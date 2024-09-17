@@ -5,7 +5,7 @@ import locale
 # Configurar a localidade para português do Brasil
 locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
 
-df = pd.read_excel('C:\\Users\\patricia.messina\\Desktop\\Dados-de-rescisão.xlsx')
+df = pd.read_excel('Dados-de-rescisão.xlsx')
 
 # Exibir as primeiras linhas
 print(df.head())
@@ -35,7 +35,7 @@ fig = px.bar(soma_por_nome_empresa, x='Nome Empresa', y='Líquido Rescisão',
 fig.show()
 
 
-df2 = pd.read_excel('C:\\Users\\patricia.messina\\Desktop\\Dados-de-rescisão.xlsx')
+df2 = pd.read_excel('Dados-de-rescisão.xlsx')
 
 agrupar_por_dt_demissao = df2.groupby('Nome Empresa')['Dt Demissão'].count().reset_index()
 
@@ -51,7 +51,7 @@ fig2.show()
 
 
 # Carregar o arquivo Excel
-df3 = pd.read_excel('C:\\Users\\patricia.messina\\Desktop\\Dados-de-rescisão.xlsx')
+df3 = pd.read_excel('Dados-de-rescisão.xlsx')
 
 # Certificar-se de que a coluna de datas está em formato datetime
 df3['Dt Demissão'] = pd.to_datetime(df3['Dt Demissão'], errors='coerce')
